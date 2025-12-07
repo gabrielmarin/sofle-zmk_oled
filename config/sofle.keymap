@@ -44,7 +44,12 @@
 
         select.till.end {
             bindings = <&kp LS(LC(END))>;
-            key-positions = <37 38 39>;
+            key-positions = <38 39>;
+        };
+
+        select.till.begin {
+            bindings = <&kp LS(LC(HOME))>;
+            key-positions = <37 38>;
         };
     };
 
@@ -76,16 +81,16 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp GRAVE     &kp N1          &kp N2          &kp N3       &kp N4            &kp N5                                      &kp N6     &kp N7            &kp N8       &kp N9          &kp N0             &kp DELETE
-&kp ESC       &kp Q           &kp W           &kp E        &kp R             &kp T                                       &kp Y      &kp U             &kp I        &kp O           &kp P              &kp BSPC
-&mt CAPS TAB  &hm LEFT_WIN A  &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G                                       &kp H      &hm LEFT_SHIFT J  &hm LCTRL K  &hm LEFT_ALT L  &hm LEFT_WIN SEMI  &kp SQT
-&kp LSHFT     &kp Z           &kp X           &kp C        &lt 4 V           &kp B      &kp C_MUTE    &ext_power EP_TOG  &kp N      &kp M             &kp COMMA    &kp DOT         &kp FSLH           &kp RSHFT
-                              &kp LGUI        &kp LALT     &kp LCTRL         &mo LOWER  &kp RET       &kp SPACE          &mo RAISE  &kp RCTRL         &kp RALT     &kp RGUI
+&kp GRAVE     &kp N1          &kp N2          &kp N3       &kp N4            &kp N5                              &kp N6     &kp N7            &kp N8       &kp N9          &kp N0             &kp DELETE
+&kp ESC       &kp Q           &kp W           &kp E        &kp R             &kp T                               &kp Y      &kp U             &kp I        &kp O           &kp P              &kp BSPC
+&mt CAPS TAB  &hm LEFT_WIN A  &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G                               &kp H      &hm LEFT_SHIFT J  &hm LCTRL K  &hm LEFT_ALT L  &hm LEFT_WIN SEMI  &kp SQT
+&kp LSHFT     &kp Z           &kp X           &kp C        &lt 4 V           &kp B      &kp C_MUTE    &soft_off  &kp N      &kp M             &kp COMMA    &kp DOT         &kp FSLH           &kp RSHFT
+                              &kp LGUI        &kp LALT     &kp LCTRL         &mo LOWER  &kp RET       &kp SPACE  &mo RAISE  &kp RCTRL         &kp RALT     &kp RGUI
             >;
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+                <&inc_dec_kp LC(PLUS) LC(MINUS)>;
         };
 
         lower_layer {

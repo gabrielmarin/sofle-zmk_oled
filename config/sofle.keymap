@@ -30,12 +30,6 @@
     combos {
         compatible = "zmk,combos";
 
-        altf4 {
-            bindings = <&kp LA(F4)>;
-            key-positions = <14 15 16>;
-            layers = <0>;
-        };
-
         ctrl- {
             bindings = <&kp LC(MINUS)>;
             key-positions = <19 20>;

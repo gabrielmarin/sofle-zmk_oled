@@ -36,20 +36,44 @@
             layers = <0>;
         };
 
-        equals {
-            bindings = <&kp EQUAL>;
-            key-positions = <31 32>;
-            layers = <0>;
-        };
-
         select.till.end {
             bindings = <&kp LS(LC(END))>;
-            key-positions = <38 39>;
+            key-positions = <38 39 52>;
         };
 
         select.till.begin {
             bindings = <&kp LS(LC(HOME))>;
+            key-positions = <37 38 52>;
+        };
+
+        select-line-till-begin {
+            bindings = <&kp LS(HOME)>;
             key-positions = <37 38>;
+        };
+
+        select-line-till-end {
+            bindings = <&kp LS(END)>;
+            key-positions = <38 39>;
+        };
+
+        ctrl- {
+            bindings = <&kp LC(MINUS)>;
+            key-positions = <19 20>;
+        };
+
+        ctrl+ {
+            bindings = <&kp LC(PLUS)>;
+            key-positions = <20 21>;
+        };
+
+        alt-greater {
+            bindings = <&kp LA(GREATER_THAN)>;
+            key-positions = <46 47>;
+        };
+
+        alt+lesser {
+            bindings = <&kp LA(LESS_THAN)>;
+            key-positions = <45 46>;
         };
     };
 
@@ -129,7 +153,7 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans    &trans    &trans     &trans   &trans
 &trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
 &trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
-&trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans     &trans    &trans    &trans     &trans   &trans
+&trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans     &kp HOME  &kp END   &trans     &trans   &trans
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans    &trans
             >;
 

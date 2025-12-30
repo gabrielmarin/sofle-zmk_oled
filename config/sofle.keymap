@@ -29,6 +29,26 @@
 
     combos {
         compatible = "zmk,combos";
+        
+        select.till.end {
+            bindings = <&kp LS(LC(END))>;
+            key-positions = <38 39 52>;
+        };
+
+        select.till.begin {
+            bindings = <&kp LS(LC(HOME))>;
+            key-positions = <37 38 52>;
+        };
+
+        select-line-till-begin {
+            bindings = <&kp LS(HOME)>;
+            key-positions = <37 38>;
+        };
+
+        select-line-till-end {
+            bindings = <&kp LS(END)>;
+            key-positions = <38 39>;
+        };
 
         ctrl- {
             bindings = <&kp LC(MINUS)>;
